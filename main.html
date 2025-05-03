@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dead Petal LLC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0a0a0a, #1c1c1c);
+      background-size: cover;
+      font-family: 'Cardo', serif;
+      color: #e0e0e0;
+    }
+    .shimmer {
+      background: linear-gradient(90deg, #e0e0e0 0%, #ff4d4d 50%, #e0e0e0 100%);
+      background-size: 200% auto;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+    @keyframes shimmer {
+      0% {
+        background-position: 200% center;
+      }
+      100% {
+        background-position: -200% center;
+      }
+    }
+    .glow-on-hover:hover {
+      box-shadow: 0 0 16px #ff4d4d, 0 0 32px #ff4d4d;
+      transition: all 0.4s ease-in-out;
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="px-12 py-10 flex justify-between items-center border-b border-gray-700 fade-in">
+    <h1 class="text-6xl shimmer tracking-wide">Dead Petal</h1>
+    <nav class="space-x-12 text-lg">
+      <a href="#about" class="hover:text-red-400 transition">About</a>
+      <a href="#contact" class="hover:text-red-400 transition">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex-grow flex flex-col items-center justify-center text-center px-10 py-24 fade-in">
+    <!-- <h2 class="text-7xl font-bold mb-10 text-white">Something Beautiful is Already Gone</h2> -->
+    <p class="max-w-3xl text-gray-300 mb-12 text-4xl">A new game studio crafting worlds where beauty and decay are BFFs</p>
+    <button id="notifyBtn" class="px-10 py-5 bg-transparent border border-red-600 text-red-400 rounded-full hover:bg-red-600 hover:text-white glow-on-hover">
+      Join the Waiting List
+    </button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="px-12 py-15 max-w-5xl mx-auto fade-in">
+    <h3 class="text-4xl font-semibold mb-8 border-b border-gray-600 pb-4 text-red-400">About Us</h3>
+    <p class="text-gray-300 leading-relaxed text-2xl">
+      Dead Petal is a Nashville-based independent studio dedicated to crafting addictive, atmospheric experiences that immerse players in pure, unforgettable bliss. Though young, Dead Petal is driven by a relentless passion to create games that leave a mark,  games that pull players into places they never want to leave.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-12 py-24 max-w-5xl mx-auto fade-in">
+    <h3 class="text-4xl font-semibold mb-8 border-b border-gray-600 pb-4 text-red-400">Contact</h3>
+    <p class="text-gray-300 mb-8 text-2xl">Interested in collaborating or learning more? Reach out to us at:</p>
+    <p class="text-gray-100 font-mono text-2xl">info@deadpetalgames.com</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-10 text-gray-500 text-lg border-t border-gray-700 mt-20 fade-in">
+    &copy; 2025 Dead Petal LLC. All rights reserved.
+  </footer>
+
+  <!-- Basic Vanilla JS -->
+  <script>
+    const btn = document.getElementById('notifyBtn');
+    btn.addEventListener('click', () => {
+      alert('Coming Soon! Stay tuned...');
+    });
+  </script>
+
+</body>
+</html>
