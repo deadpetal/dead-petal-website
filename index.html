@@ -66,7 +66,7 @@
   <section id="about" class="px-12 py-15 max-w-5xl mx-auto fade-in">
     <h3 class="text-4xl font-semibold mb-8 border-b border-gray-600 pb-4 text-red-400">About Us</h3>
     <p class="text-gray-300 leading-relaxed text-2xl">
-      Dead Petal is a Nashville-based independent studio dedicated to crafting addictive, atmospheric experiences that immerse players in pure, unforgettable bliss. Though young, Dead Petal is driven by a relentless passion to create games that leave a mark,  games that pull players into places they never want to leave.
+      Dead Petal is a Nashville-based independent studio dedicated to crafting addictive, atmospheric experiences that immerse players in pure, unforgettable bliss. Though young, Dead Petal is driven by a relentless passion to create games that leave a mark, games that pull players into places they never want to leave.
     </p>
   </section>
 
@@ -90,11 +90,16 @@
     });
   </script>
 
-  <!-- Ko-fi Widget Script -->
-  <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-  <script type='text/javascript'>
-    kofiwidget2.init('Support us on Ko-fi', '#e84b4b', 'I2I11E8XO6');
-    kofiwidget2.draw();
+  <!-- Ko-fi Floating Widget Script (Top-Right) -->
+  <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+  <script>
+    kofiWidgetOverlay.draw('I2I11E8XO6', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'Support Us',
+      'floating-chat.donateButton.background-color': '#e84b4b',
+      'floating-chat.donateButton.text-color': '#ffffff',
+      'floating-chat.position': 'top-right'
+    });
   </script>
 
 </body>
