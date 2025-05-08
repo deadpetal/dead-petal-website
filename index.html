@@ -47,9 +47,12 @@
   <!-- Header -->
   <header class="px-12 py-10 flex justify-between items-center border-b border-gray-700 fade-in">
     <h1 class="text-6xl shimmer tracking-wide">Dead Petal</h1>
-    <nav class="space-x-12 text-lg">
+    <nav class="space-x-12 text-lg flex items-center">
       <a href="#about" class="hover:text-red-400 transition">About</a>
       <a href="#contact" class="hover:text-red-400 transition">Contact</a>
+      <a href='https://ko-fi.com/I2I11E8XO6' target='_blank'>
+        <img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=6' alt='Buy Me a Coffee at ko-fi.com' />
+      </a>
     </nav>
   </header>
 
@@ -87,18 +90,6 @@
     const btn = document.getElementById('notifyBtn');
     btn.addEventListener('click', () => {
       alert('Coming Soon! Stay tuned...');
-    });
-  </script>
-
-  <!-- Ko-fi Floating Widget Script (Top-Right) -->
-  <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-  <script>
-    kofiWidgetOverlay.draw('I2I11E8XO6', {
-      'type': 'floating-chat',
-      'floating-chat.donateButton.text': 'Support Us',
-      'floating-chat.donateButton.background-color': '#e84b4b',
-      'floating-chat.donateButton.text-color': '#ffffff',
-      'floating-chat.position': 'top-right'
     });
   </script>
 
